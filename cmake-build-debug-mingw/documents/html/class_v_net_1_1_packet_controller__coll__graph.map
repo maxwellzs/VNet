@@ -1,0 +1,7 @@
+<map id="VNet::PacketController" name="VNet::PacketController">
+<area shape="rect" id="Node000001" title=" " alt="" coords="71,96,225,123"/>
+<area shape="rect" id="Node000002" href="$class_v_net_1_1_send_box.html" title=" " alt="" coords="5,5,117,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="86,41,137,94,133,97,82,45"/>
+<area shape="rect" id="Node000003" href="$class_v_net_1_1_packet_incoming_queue.html" title=" " alt="" coords="141,5,330,32"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="214,45,162,97,158,94,211,41"/>
+</map>

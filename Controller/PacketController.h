@@ -40,9 +40,10 @@ namespace VNet {
         sequence_t thisSequence;
         sequence_t nextSequence;
         uint16_t length;
+        uint16_t listenPort;
     } PacketMetaData;
 
-#define META_DATA_SIZE (sizeof(uint8_t) + 2 * sizeof(uint32_t) + sizeof(uint16_t))
+#define META_DATA_SIZE (sizeof(uint8_t) + 2 * sizeof(uint32_t) + sizeof(uint16_t) + sizeof(uint16_t))
 
 
     /**

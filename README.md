@@ -34,7 +34,7 @@ mingw32-make -j8
 > 
 > 原因 ：端口被占用
 
->> [!] IO exception occurred : xxxxxxx
+> [!] IO exception occurred : xxxxxxx
 >
 > 原因 : 底层套接字异常
 

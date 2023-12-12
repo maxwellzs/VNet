@@ -1,0 +1,15 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,132,109,159"/>
+<area shape="rect" id="Node000001" href="$class_v_net_1_1_buffer_receive_exception.html" title=" " alt="" coords="168,5,363,32"/>
+<area shape="poly" id="edge1_Node000000_Node000001" title=" " alt="" coords="74,118,109,78,131,58,155,42,182,30,184,35,158,46,134,63,113,82,78,121"/>
+<area shape="rect" id="Node000002" href="$class_v_net_1_1_controller_startup_exception.html" title=" " alt="" coords="159,56,372,83"/>
+<area shape="poly" id="edge2_Node000000_Node000002" title=" " alt="" coords="93,122,156,92,193,81,195,86,158,97,96,126"/>
+<area shape="rect" id="Node000003" href="$class_v_net_1_1_invalid_command_exception.html" title=" " alt="" coords="160,107,371,133"/>
+<area shape="poly" id="edge3_Node000000_Node000003" title=" " alt="" coords="124,135,160,130,160,135,125,140"/>
+<area shape="rect" id="Node000004" href="$class_v_net_1_1_packet_handle_exception.html" title=" " alt="" coords="167,157,364,184"/>
+<area shape="poly" id="edge4_Node000000_Node000004" title=" " alt="" coords="125,151,167,156,166,161,124,156"/>
+<area shape="rect" id="Node000005" href="$class_v_net_1_1_read_out_of_bound_exception.html" title=" " alt="" coords="157,208,374,235"/>
+<area shape="poly" id="edge5_Node000000_Node000005" title=" " alt="" coords="96,164,158,194,195,205,193,210,156,198,93,169"/>
+<area shape="rect" id="Node000006" href="$class_v_net_1_1_text_message_exception.html" title=" " alt="" coords="168,259,363,285"/>
+<area shape="poly" id="edge6_Node000000_Node000006" title=" " alt="" coords="78,169,113,209,134,228,158,244,184,256,182,261,155,249,131,232,109,212,74,173"/>
+</map>

@@ -191,14 +191,18 @@ void VNet::PacketController::handleData(std::shared_ptr<DataBuffer> coming, sock
         + std::to_string(meta.length) + " actual=" + std::to_string(coming->getBufferSize()));
     }
 
-    sendBox.registerDestination(from, true);
+    sockaddr_in actual = from;
+    actual.sin_port= meta.listenPort;
+
+    sendBox.registerDestination(actual, true);
     pending.removeTimedOutArray();
 
     std::shared_ptr<Packet> packet = nullptr;
 
     if(meta.flag & FLAG_ECHO) {
         // received an echo meta data, don't invoke handlers
-        sendBox.cancelPacket(meta.thisSequence, from);
+        // prevent the network exchange from altering the address, especially in the shared network
+        sendBox.cancelPacket(meta.thisSequence, actual);
         return;
     } else if(meta.flag & FLAG_HEAD) {
         // the first segmentation of the data
@@ -226,6 +230,7 @@ VNet::PacketMetaData VNet::PacketController::getMetaData(std::shared_ptr<DataBuf
     meta.thisSequence = in->getUint32();
     meta.nextSequence = in->getUint32();
     meta.length = in->getUint16();
+    meta.listenPort = in->getUint16();
     return meta;
 }
 
@@ -234,6 +239,7 @@ void VNet::PacketController::writeMetaData(VNet::PacketMetaData dat, std::shared
     out->putUint32(dat.thisSequence);
     out->putUint32(dat.nextSequence);
     out->putUint16(dat.length);
+    out->putUint16(dat.listenPort);
 }
 
 void VNet::PacketController::setEchoSocket(SOCKET s) {
@@ -247,6 +253,7 @@ void VNet::PacketController::echoBack(sockaddr_in from, VNet::sequence_t which) 
     temp.putUint32(which);
     temp.putUint32(0);
     temp.putUint16(META_DATA_SIZE);
+    temp.putUint16(htons(this->port));
     sendto(sock,
            (char *)temp.getBaseBuffer(),
            temp.getBufferSize(), 0,
@@ -285,6 +292,7 @@ VNet::PacketController::preparePacketData(std::shared_ptr<Packet> packet, std::s
     meta.thisSequence = generateSequence();
     meta.nextSequence = 1 << 31; // preserved
     meta.flag = FLAG_RESEND;
+    meta.listenPort = htons(this->port);
 
     writeMetaData(meta,buf);
 
