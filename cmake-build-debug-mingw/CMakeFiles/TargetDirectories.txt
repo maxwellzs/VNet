@@ -1,4 +1,0 @@
-C:/Users/maxwellzs/CLionProjects/VNet/cmake-build-debug-mingw/CMakeFiles/VNetBase.dir
-C:/Users/maxwellzs/CLionProjects/VNet/cmake-build-debug-mingw/CMakeFiles/VNet.dir
-C:/Users/maxwellzs/CLionProjects/VNet/cmake-build-debug-mingw/CMakeFiles/edit_cache.dir
-C:/Users/maxwellzs/CLionProjects/VNet/cmake-build-debug-mingw/CMakeFiles/rebuild_cache.dir

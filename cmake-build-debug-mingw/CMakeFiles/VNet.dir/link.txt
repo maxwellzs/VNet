@@ -1,3 +1,0 @@
-C:\CMake\bin\cmake.exe -E rm -f CMakeFiles\VNet.dir/objects.a
-C:\mingw64\bin\ar.exe qc CMakeFiles\VNet.dir/objects.a @CMakeFiles\VNet.dir\objects1.rsp
-C:\mingw64\bin\ccache-cpp.bat -g -Wl,--whole-archive CMakeFiles\VNet.dir/objects.a -Wl,--no-whole-archive -o VNet.exe -Wl,--out-implib,libVNet.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\VNet.dir\linkLibs.rsp

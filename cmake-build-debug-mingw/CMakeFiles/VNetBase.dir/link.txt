@@ -1,3 +1,0 @@
-C:\CMake\bin\cmake.exe -E rm -f CMakeFiles\VNetBase.dir/objects.a
-C:\mingw64\bin\ar.exe qc CMakeFiles\VNetBase.dir/objects.a @CMakeFiles\VNetBase.dir\objects1.rsp
-C:\mingw64\bin\ccache-cpp.bat -g -shared -o libVNetBase.dll -Wl,--out-implib,libVNetBase.dll.a -Wl,--major-image-version,0,--minor-image-version,0 -Wl,--whole-archive CMakeFiles\VNetBase.dir/objects.a -Wl,--no-whole-archive @CMakeFiles\VNetBase.dir\linkLibs.rsp
