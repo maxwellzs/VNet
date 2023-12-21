@@ -10,7 +10,7 @@ void VNet::IPSyncHandler::onPacketReceiveCallback(VNet::PacketController &parent
         // ip sync pack
         auto vec = std::static_pointer_cast<IPSyncPacket>(packet)->getAddress();
         for(auto i : vec) {
-            parent.registerBroadcastDestination(i, false);
+            parent.registerBroadcastDestination(i, true);
         }
     }
 }
@@ -24,7 +24,7 @@ void VNet::IntervalSyncHandler::onInterval(VNet::PacketController &parent) {
     for(auto each : allDestinations) {
         std::shared_ptr<IPSyncPacket> out = std::make_shared<IPSyncPacket>();
         out->putAddress(each);
-        parent.broadcastPacketExcept(out,each);
+        parent.broadcastPacket(out);
     }
     // every sync packet only have 3 retry
 }

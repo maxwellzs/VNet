@@ -87,6 +87,10 @@ void VNet::UDPController::signalStop() {
     shouldStop = true;
 }
 
+void VNet::UDPController::connect(sockaddr_in addr) {
+    controller.registerBroadcastDestination(addr,true);
+}
+
 const char *VNet::ControllerStartupException::what() const noexcept {
     return msg.c_str();
 }

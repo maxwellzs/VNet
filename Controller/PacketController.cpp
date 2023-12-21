@@ -384,7 +384,7 @@ std::shared_ptr<VNet::DataBuffer> VNet::PacketIncomingQueue::mergeData() {
 }
 
 VNet::IntervalEventHandler::IntervalEventHandler(clock_t interval) : interval(interval) {
-    lastPull = clock();
+    lastPull = clock() - interval;
 }
 
 bool VNet::IntervalEventHandler::isTimedOut() {

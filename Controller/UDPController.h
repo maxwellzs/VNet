@@ -63,6 +63,12 @@ namespace VNet {
          */
         void runController();
 
+        /**
+         * connect to a given address
+         * @param addr the address
+         */
+        void connect(sockaddr_in addr);
+
         inline void addHandler(std::shared_ptr<EventHandler> handler) {
             controller.registerHandler(handler);
         }
